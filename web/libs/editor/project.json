@@ -5,6 +5,22 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+
+"lib": {
+  "executor": "@nx/js:tsc",
+  "options": {
+    "outputPath": "dist/libs/editor",
+    "tsConfig": "libs/editor/tsconfig.lib.json",
+    "main": "libs/editor/src/standalone.js",
+    "assets": [
+      {
+        "glob": "public",
+        "input": "libs/editor",
+        "output": "public/"
+      }
+    ]
+  }
+},
     "build": {
       "executor": "@nx/webpack:webpack",
       "defaultConfiguration": "production",

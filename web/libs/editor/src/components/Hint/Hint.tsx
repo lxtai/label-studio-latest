@@ -3,10 +3,11 @@ import { Block } from "../../utils/bem";
 
 import "./Hint.scss";
 
-interface HintProps {
+export interface HintProps {
   copy?: string;
   style?: CSSProperties;
   className?: string;
+  children?: React.ReactNode;
 }
 
 /**

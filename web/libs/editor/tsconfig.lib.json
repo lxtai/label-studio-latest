@@ -1,20 +1,58 @@
+// {
+//   "extends": "./tsconfig.json",
+//   "compilerOptions": {
+//     "outDir": "../../dist/out-tsc",
+//   },
+//   "files": [
+//   ],
+//   "exclude": [
+//     "jest.config.ts",
+//     "src/**/*.spec.ts",
+//     "src/**/*.test.ts",
+//     "src/**/*.spec.tsx",
+//     "src/**/*.test.tsx",
+//     "src/**/*.spec.js",
+//     "src/**/*.test.js",
+//     "src/**/*.spec.jsx",
+//     "src/**/*.test.jsx"
+//   ],
+//   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
+// }
+
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    // "outDir": "dist/libs/editor/types",
+    // "declaration": true,
+    // "emitDeclarationOnly": true,
+    // "skipLibCheck": true,
+    // "strict": false,
+    //"outDir": "dist/libs/editor/types",
+    "declaration": true,
+    //"emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "allowJs": true,
   },
-  "files": [
+    "files": [
+  ],
+  "include": ["src/**/*", "src/**/*", "node_modules/@types"],
+    "references": [
+    { "path": "../ui" }
   ],
   "exclude": [
     "jest.config.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.tsx",
-    "src/**/*.test.tsx",
-    "src/**/*.spec.js",
-    "src/**/*.test.js",
-    "src/**/*.spec.jsx",
-    "src/**/*.test.jsx"
-  ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx"
+  ]
 }

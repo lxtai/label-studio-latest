@@ -43,7 +43,16 @@
     "xpath-range": "^1.1.1"
   },
   "main": "src/index.js",
+  "scripts": {
+    "build:bundle": "nx run editor:build:production",
+    "types": "npx tsc -p tsconfig.lib.json --noCheck",
+    "build": "npm run build:bundle && npm run build:types"
+  },
   "devDependencies": {
     "babel-plugin-istanbul": "^7.0.0"
-  }
+  },
+  "types": "dist/libs/editor/types/index.d.ts",
+  "files": [
+    "dist/libs/editor/**/*"
+  ]
 }

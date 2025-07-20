@@ -34,7 +34,7 @@ const getMinIndex = (element?: HTMLElement) => {
   return index;
 };
 
-interface DropdownTriggerProps extends DropdownProps {
+export interface DropdownTriggerProps extends DropdownProps {
   tag?: string;
   dropdown?: RefObject<DropdownRef>;
   content?: React.ReactNode;
